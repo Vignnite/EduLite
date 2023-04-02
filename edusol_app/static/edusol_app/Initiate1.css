@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display =swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+header{
+  background: linear-gradient(to bottom , rgba(27, 24, 0, 0.816),
+  #18182bbc);
+}
+header .nav {
+    position: relative;
+    display: flex;
+}
+header .nav li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .nav li .retbut {
+  background-color: rgba(1, 2, 29, 0.721);
+  border: 1.5px solid azure;
+  transition: 0.5s;  
+  text-decoration: none;
+  margin: 0.5rem;
+  margin-left: 0;
+  padding:1rem;
+  border-radius: 1.6rem;
+} 
+header .nav li a {
+  color: #f06807;
+  font-weight: 800;
+  font-size:small;
+  transition: 0.5s;
+  text-decoration: none;
+}
+header .nav li h1{
+  color:antiquewhite;
+  margin-top:0.7rem;  
+  margin-left: 26rem;
+  padding-left:2rem;
+  padding-right:2rem ;
+  padding-top:0.2rem;
+  border: 0.5px groove rgba(255, 255, 255, 0.148);
+  border-radius:1rem;
+  box-shadow: 2px 3px 15px 8px rgba(33, 33, 72, 0.76);
+  background-color: rgba(90, 64, 64, 0);
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+}
+header .nav li h1:hover{
+  letter-spacing: 3.8px;
+  font-weight: bolder;
+  border: azure;
+  color:#f06807;
+  box-shadow: 1px 2px 15px 8px #cdcdcd9d;
+}
+header .nav li h1:hover{
+  color:white;
+}
+header .nav li h1 span{
+  color:#f06807;
+}
+header .nav li .retbut:hover {
+    background-color: #111111b2;
+} 
+header .nav li a:hover {
+  letter-spacing: 4.5px;
+  font-weight: bolder;
+  border: azure;
+  color: rgb(236, 174, 15);
+}
+section {
+  padding-left: 30rem;
+  padding-top: 1rem;
+}
+h2 .titleText {
+  color:#111;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.titleText span {
+  color: rgba(246, 80, 15, 0.879);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.heading
+{
+  margin:0.7rem;
+  margin-bottom:1.2rem;
+}
+.heading span{
+  color:#f9f7f7e5;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.cutoff {
+  background: linear-gradient(
+    to top,
+    rgba(62, 105, 186, 0.296),
+    rgba(51, 51, 51, 0.262)
+  ),url(Img/eduform.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cutoff-Form {
+  padding: 60px 100px 0px 100px;
+  width:100rem;
+  height:568px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(62, 61, 61, 0.693),
+    rgba(51, 51, 51, 0)
+  ),url(Img/edulog.jpg);
+  box-shadow: 0px 0px 15px 9px rgba(8, 1, 52, 0.495);
+  border: 1px groove rgba(254, 254, 254, 0.592);
+  border-radius: 20px;
+  max-width: 600px;
+  margin-bottom: -20px;
+  margin-top: 10px;
+}
+.cutoff-Form h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+.cutoff .title .titleText {
+  color:rgb(251, 251, 251);
+  font-weight: bold;
+}
+.cutoff-Form .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.7rem;
+}
+.cutoff-Form .inputBox input,
+.cutoff-Form .inputBox textarea {
+  width: 100%;
+  border: 1px solid #07070721;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fffffff6;
+  background-color: rgba(28, 26, 26, 0.577);
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+.cutoff-Form .inputBox input::placeholder{
+  color:#b1b0b096;
+}
+.cutoff-Form .inputBox textarea::placeholder {
+  color:#b1b0b0a2;
+}
+.cutoff-Form .inputBox textarea 
+{
+  height:69px;
+}
+.cutoff-Form .inputBox input[type="submit"] {
+  font-size: 1em;
+  color: #fff;
+  background: rgb(246, 80, 15);
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  max-width: 12rem;
+  font-weight: 500;
+  border:1px solid rgba(255, 255, 255, 0.753);
+  border-radius: 2rem;
+  margin-left: 6rem;
+  margin-top:0rem;
+  border: none;
+  cursor: pointer;
+}
+.cutoff-Form .inputBox input[type="submit"]:hover{
+  letter-spacing: 4.5px;
+  font-weight: bolder;
+  border: azure;
+  color: rgb(236, 174, 15);
+  background-color: #111111c5;
+}

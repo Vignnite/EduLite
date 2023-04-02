@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Choices
+{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "edusol_app/choice.css" %}">
+{% endblock %}
+{% block content %}
+  <header>
+    <h1>Choice List for the given Cut-off</h1>
+  </header>
+  <div class="container">
+   <a href ="#" >
+      <div class="card">
+        <div class ="content">
+          <h2>01</h2>
+          <h3><span>C</span>hoice <span>O</span>ne</h3>
+          <p>If You opt this Choice, then it returns the possibilities for the <strong>Colleges and Courses</strong> chosen by you as filer Options.</p>
+        </div>  
+      </div>
+    </a>
+   <a href="#"> 
+     <div class="card">
+      <div class ="content">
+        <h2>02</h2>
+        <h3><span>C</span>hoice <span>T</span>wo</h3>
+        <p>It returns a List of <strong>Colleges for Predicted Cut-off</strong> fetched from the user.</p>
+      </div>
+     </div>
+    </a> 
+  </div>
+{% endblock %}

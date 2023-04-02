@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Edusol Lobby
+{% endblock %}
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "edusol_app/home_style.css" %}">
+{% endblock %}
+{% block content %}
+   <header>
+      <div class="logo_pic">
+        <a href="#home" class="logo">
+          <!-- Edu<span>S</span>ol -->
+          <img
+            id="edulog"
+            src="{% static "edusol_app/Img/Logos/logo-no-background.png" %}"
+            width="150"
+            height="88"
+          />
+        </a>
+      </div>
+      <ul class="nav">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#dev">Developers</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact </a></li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h2>We Predict for You</h2>
+        <p>
+          We are humble to welcome you to the Edusol lobby,<br />
+          we take efforts to relieve your anxiety over your academic performance
+          <br />and we provide you a nearabout of how many doors are there for
+          you to pave your way ahead
+        </p>
+        <a href="{%url "edusol-form-page" %}" class="button">Join us</a>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="row">
+        <div class="col">
+          <h2 class="titleText"><span>A</span>bout Us</h2>
+          <p>
+            There are various student counselling and guidance systems present
+            for purposes like for example, Early Warning System to identify
+            at-risk students and preventing dropping out. An intelligent
+            tutoring system, helping students to study and learn the concepts in
+            the course by giving navigational support according to their
+            knowledge level. Career counselling system is used to predict the
+            suitable department for an individual based on their skills assessed
+            by an objective test and previous historical academics oriented
+            records. A good college or university recommendation system may help
+            students to plan their future accordingly & create their own
+            opportunities which could lead to a better life. <br /><br />
+            The main idea of this project is to build a ML/DL based model that
+            makes prediction for the possibility of entering a specific college,
+            programme, branch or stream specialization based on HSE scores
+            procured & a ranked list of colleges giving a state of peace of mind
+            to students & parents.
+          </p>
+        </div>
+        <div class="col">
+          <div class="imgbg">
+            <img src="{%static "edusol_app/Img/edubg1.jpg" %}" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <div class="title">
+        <h2 class="titleText"><span>F</span>eatures</h2>
+        <p>
+          The Following are the key features of EduSol that we guarentee fo all
+          the users visiting us &colon;
+        </p>
+      </div>
+      <div class="content">
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/stud.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>Student Centric</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/univ.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>Large universities based Data Collection</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/predict.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>Prediction of cutoff based on tested Dataset</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/easc.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>Free Web source and Scalable</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/accu.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>Accurate</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/use.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>User Friendly and robust</h3>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <a href="#" class="button">View All</a>
+      </div>
+    </section>
+    <section class="dev" id="dev">
+      <div class="title">
+        <h2 class="titleText"><span>Dev</span>lopers</h2>
+        <p>
+          We are the developers who were not just developers but are one of the
+          stakeholders
+        </p>
+      </div>
+      <div class="content">
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/Logos/logo-white.png" %}" />
+          </div>
+          <div class="text">
+            <h3>
+              Meet <span>Joshua Henry Sahayam S</span><br />Qualification: B.E
+              CSE(3rd Year)<br />Interests: He is a Full time devotee to ML ,
+              Data science and Data analysis , he also extends his interests to
+              computer vision and DL.
+            </h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/Logos/logo-white.png" %}"/>
+          </div>
+          <div class="text">
+            <h3>
+              Meet <span>Venkata Ramana S</span><br />Qualification: B.E CSE(3rd
+              Year)<br />Interests :He is a Specialized front-end
+              enthusiasist,<br />
+              being a fan of living organized he also shares interests towards
+              Databases.
+            </h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgbg">
+            <img src="{% static "edusol_app/Img/Vignnite.jpg.jpg" %}" />
+          </div>
+          <div class="text">
+            <h3>
+              Meet <span>Vignesh R</span> <br />Qualification: B.E CSE(3rd
+              Year)<br />Interests :He is a Proactivist in Full-Stack Web
+              Development,<br />
+              a minor scope of his domain extending to ML and Data Science.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="title">
+        <h2 class="titleText"><span>C</span>ontact Us</h2>
+        <div class="contactForm" > 
+          <div class ="heading">
+            <span>Comment us</span>
+          </div> 
+          <div class="inputBox">
+            <input type="text" placeholder="Enter your Name" />
+          </div>
+          <div class="inputBox">
+            <input type="email" placeholder="Enter your EmailID" />
+          </div>
+          <div class="inputBox">
+            <textarea placeholder="Comment Your suggestion about us "></textarea>
+          </div>
+          <div class="inputBox">
+            <input class = "subbtn" type="submit" value="Send" />
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <div class="copyrig">
+      <p>&copy; Copyright 2023 EduSol .All Rights Are reserved &reg;</p>
+    </div>
+    <script type="text/javascript" src="{% static "edusol_app/main.js" %}"></script>
+{% endblock %}

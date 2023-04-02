@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Home Lobby
+{% endblock %}
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "edusol_app/Initiate1.css" %}">
+{% endblock %}
+{% block content %}
+  <header>
+  <ul class="nav">
+      <li><button type = submit class="retbut"><a href ="{% url "edusol-starting-page" %}">&larr;&nbsp;&nbsp;Back</a></button></li>
+      <li><h1><span>E</span>dusol <span>D</span>ata <span>D</span>orm</h1></li>
+  </ul>
+  </header>
+  <hr>
+  <section class="cutoff" id="cutoff">
+      <div class="title">
+        <h2 class="titleText"><span>F</span>orm <span>F</span>etch <span>C</span>utoff :<span></span></h2>
+        <div class="cutoff-Form" > 
+          <div class ="heading">
+            <span>Give Us The following information to let us predict for you</span>
+          </div> 
+          <div class="inputBox">
+            <input type="text" placeholder="Enter your Name" />
+          </div>
+          <div class="inputBox">
+            <input type="email" placeholder="Enter your Email-ID" />
+          </div>
+          <div class ="inputBox">
+            <input type="text" name ="Maths" placeholder="Enter your Maths score /100" />
+          </div>
+          <div class ="inputBox">
+            <input type="text" name ="Physics" placeholder="Enter your Physics score /100" />
+          </div>
+          <div class ="inputBox">
+            <input type="text" name ="Chemistry" placeholder="Enter your Chemistry score /100" />
+          </div>
+          <div class="inputBox">
+            <a href ="{% url "choice-detail-page" %}"><input class = "subbtn" type="submit" value="Predict" /></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
