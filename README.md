@@ -7,3 +7,5 @@ The Server is started and takes you to  http://localhost:8000 which is the home 
 In the homepage Enter <strong>Join us</strong> to continue <br>
 In the form fill the details to proceed with <strong>predict</strong><br> 
 Then choose any one of the choice to get the result<br>
+<strong>Choice 1</strong> : For Advanced search Based on <strong>Institute ,Course,Community </strong>that the person belongs to ,<br>so that the user recieves a probabilty of entering given the constarints<br>
+<strong>Choice 2 </strong>: For the tabel of available and unavilable choices based on predicted Cutoffs
