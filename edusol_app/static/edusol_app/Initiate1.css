@@ -185,3 +185,8 @@ h2 .titleText {
   color: rgb(236, 174, 15);
   background-color: #111111c5;
 }
+.cut{
+  position: absolute;
+  top: 2rem;
+  left:10rem;
+}

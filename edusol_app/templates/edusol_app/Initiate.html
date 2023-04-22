@@ -16,31 +16,35 @@
   <hr>
   <section class="cutoff" id="cutoff">
       <div class="title">
-        <h2 class="titleText"><span>F</span>orm <span>F</span>etch <span>C</span>utoff :<span></span></h2>
+        <h2 class="titleText"><span>F</span>orm <span>F</span>etch <span>C</span>utoff :<section id="cut"><span></span></section></h2>
         <div class="cutoff-Form" > 
           <div class ="heading">
             <span>Give Us The following information to let us predict for you</span>
           </div> 
-          <div class="inputBox">
-            <input type="text" placeholder="Enter your Name" />
-          </div>
-          <div class="inputBox">
-            <input type="email" placeholder="Enter your Email-ID" />
-          </div>
-          <div class ="inputBox">
-            <input type="text" name ="Maths" placeholder="Enter your Maths score /100" />
-          </div>
-          <div class ="inputBox">
-            <input type="text" name ="Physics" placeholder="Enter your Physics score /100" />
-          </div>
-          <div class ="inputBox">
-            <input type="text" name ="Chemistry" placeholder="Enter your Chemistry score /100" />
-          </div>
-          <div class="inputBox">
-            <a href ="{% url "choice-detail-page" %}"><input class = "subbtn" type="submit" value="Predict" /></a>
-          </div>
+          <form action ="Choices" role ="form" method="POST"> 
+            {% csrf_token %} 
+            <div class="inputBox">
+              <input type="text" name= "Name" placeholder="Enter your Name" />
+            </div>
+            <div class="inputBox">
+              <input type="email" name ="Email" placeholder="Enter your Email-ID" />
+            </div>
+            <div class ="inputBox">
+              <input type="text" name ="Maths" placeholder="Enter your Maths score /100"  required/>
+            </div>
+            <div class ="inputBox">
+              <input type="text" name ="Physics" placeholder="Enter your Physics score /100" required/>
+            </div>
+            <div class ="inputBox">
+              <input type="text" name ="Chemistry" placeholder="Enter your Chemistry score /100" required/>
+            </div>
+            <div class="inputBox">
+              <a href ="{% url "choice-detail-page" %}"><input class = "subbtn" type="submit" value="Predict" onclick="cutoff_calc()"/></a>
+            </div>
+          </form>
         </div>
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="{% static "edusol_app/main.js" %}"></script>
 {% endblock %}

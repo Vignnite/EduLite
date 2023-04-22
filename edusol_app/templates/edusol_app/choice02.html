@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+{% load static %}
+{% block title %}
+  List of college Availability
+{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "edusol_app/choice02.css" %}">
+{% endblock %}
+{% block content %}
+  <section class= "nav">
+    <h1>Choice 2 list</h1>
+    <h3>The total number of choices found are : {{choices_count}}</h3>
+    <h3>CutOff is : {{cf}}</h3>
+    <label class="switch">
+    <input type="checkbox" >
+    <span class="slider round"></span>
+    </label>
+  </section> 
+    <div class="table-disp">  
+      <table>
+        <tr>
+          <th>College Code </th>
+          <th>College Name</th>
+          <th>Community</th>
+          <th>Expected Cutoff</th>
+          <th>Branch Code</th>
+          <th>Branch Name</th>
+        </tr> 
+        {% for all_rows in allotment_table %}
+          <tr>
+            {% for every_column in all_rows%}
+              <td>{{ every_column }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div> 
+    <script type="text/javascript" src="{% static "edusol_app/main.js" %}"></script>
+{% endblock %}
