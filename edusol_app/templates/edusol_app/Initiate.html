@@ -21,7 +21,7 @@
           <div class ="heading">
             <span>Give Us The following information to let us predict for you</span>
           </div> 
-          <form action ="Choices" role ="form" method="POST"> 
+          <form method="POST"> 
             {% csrf_token %} 
             <div class="inputBox">
               <input type="text" name= "Name" placeholder="Enter your Name" />
@@ -39,7 +39,7 @@
               <input type="text" name ="Chemistry" placeholder="Enter your Chemistry score /100" required/>
             </div>
             <div class="inputBox">
-              <a href ="{% url "choice-detail-page" %}"><input class = "subbtn" type="submit" value="Predict" onclick="cutoff_calc()"/></a>
+               <input class = "subbtn" type="submit" value = "Predict" onclick="cutoff_calc()"/>
             </div>
           </form>
         </div>

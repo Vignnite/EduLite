@@ -8,15 +8,22 @@
   <link rel="stylesheet" href="{% static "edusol_app/choice02.css" %}">
 {% endblock %}
 {% block content %}
+  <section class ="top">
   <section class= "nav">
-    <h1>Choice 2 list</h1>
-    <h3>The total number of choices found are : {{choices_count}}</h3>
-    <h3>CutOff is : {{cf}}</h3>
-    <label class="switch">
-    <input type="checkbox" >
-    <span class="slider round"></span>
-    </label>
+    <ul class="navi">
+          <li><button type = submit class="retbut"><a href ="{% url "choice-detail-page" %}">&larr;&nbsp;&nbsp;Back</a></button></li>
+    </ul>
+    <h1>Choice II Options</h1>
+    <div class= "ava-unava">
+       <a href ="{% url "second-choice-page" %}" id ="ava">Avaliability List</a>
+       <a href="{% url "second-choice-page-ua" %}" id ="unava">Unavailability List</a>  
+    </div>
   </section> 
+  <aside>
+    <h3>The total number of choices found are :<span> {{choices_count}}</span></h3>
+    <h3>CutOff is : <span>{{cf}}</span></h3>
+  </aside> 
+  </section>
     <div class="table-disp">  
       <table>
         <tr>

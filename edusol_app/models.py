@@ -345,13 +345,23 @@ class T(models.Model):
         db_table = 't'
 
 
-class User(models.Model):
-    name = models.TimeField(blank=True, null=True)
-    email = models.EmailField(blank=True, primary_key=True)
-    maths = models.IntegerField(blank=True, null=False)
-    physics = models.IntegerField(blank=True, null=False)
-    chemistry = models.IntegerField(blank=True, null=False)
+# class User(models.Model):
+#     name = models.TextField(blank=True, null=False)
+#     email = models.EmailField(blank=True, primary_key=True)
+#     maths = models.FloatField(blank=True, null=False)
+#     physics = models.FloatField(blank=True, null=False)
+#     chemistry = models.FloatField(blank=True, null=False)
+
+#     class Meta:
+#         managed = False
+#         db_table = 'user'
+class Users(models.Model):
+    name = models.TextField(blank=True, null=True)
+    email = models.TextField(primary_key=True)
+    maths = models.TextField()
+    physics = models.TextField()
+    chemistry = models.TextField()
 
     class Meta:
         managed = False
-        db_table = 'user'
+        db_table = 'users'
