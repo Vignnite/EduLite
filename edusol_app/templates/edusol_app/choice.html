@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="{% static "edusol_app/choice.css" %}">
 {% endblock %}
 {% block content %}
+  <ul class="navi">
+   <li><button type = submit class="retbut"><a href ="{% url "edusol-form-page" %}">&larr;&nbsp;&nbsp;Back</a></button></li>
+  </ul>
   <header>
     <h1>Choice List for the given Cut-off</h1>
   </header>
   <div class="container">
-   <a href ="#" >
+   <a href ="{%url "first-choice-page" %}" >
       <div class="card">
         <div class ="content">
           <h2>01</h2>

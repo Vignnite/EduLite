@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import Allotment1922, Cutoff1922, FinalAllotments1922, Users
+from .models import Allotment1922, Cutoff1922, FinalAllotments1922, Users, Collegenameoption
 from django.http import HttpResponseRedirect
+import itertools
 
 marks = []
 n_ame = []
@@ -89,5 +90,23 @@ def second_choice1(request):
         # "allotment_table_header": allotment_table_header,
         "choices_count": choices_count,
         "allotment_table": allotment_table,
+        "cf": cutoff
+    })
+
+
+def first_choice(request):
+    allot_tab = []
+    at = []
+    cutoff = cuts[0]
+    print("the cut from form page is : ", *cuts, *marks)
+    allot_tab = [list(i.values()) for i in list(
+        Collegenameoption.objects.all().values('collegename'))]
+    for i in allot_tab:
+        at.append(*i)
+    at.sort()
+    print(len(at), at)
+    return render(request, "edusol_app/choice01.html", {
+        "allot_tab": allot_tab,
+        "at": at,
         "cf": cutoff
     })

@@ -365,3 +365,14 @@ class Users(models.Model):
     class Meta:
         managed = False
         db_table = 'users'
+
+
+class Collegenameoption(models.Model):
+    # Field name made lowercase.
+    collegename = models.TextField(
+        db_column='CollegeName', blank=True, null=True)
+    id = models.IntegerField(primary_key=True)
+
+    class Meta:
+        managed = False
+        db_table = 'collegenameoption'

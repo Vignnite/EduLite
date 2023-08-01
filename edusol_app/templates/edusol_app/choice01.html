@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+{% load static %}
+{% block title %}
+  List of college Availability
+{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "edusol_app/choice01.css" %}">
+{% endblock %}
+{% block content %}
+    {{ cf }} is the given cutoff
+    <br/>Insitute name :
+    <select>
+       <option disabled="true" selected>-- Select the CollegeName --</option>
+       {% for res in at%}
+        <option>
+          {{ res }}  
+        </option>
+       {% endfor %}
+    </select>  
+    <br/>Course:
+    <br/>Community:
+{% endblock %}
